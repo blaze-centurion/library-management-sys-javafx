@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="68.0" prefWidth="560.0" style="-fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/11" fx:controller="Library.Controller.Utils.IssuedBookItemController">
+    <children>
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <children>
+                <Label fx:id="userName" alignment="CENTER" text="User Name">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="3.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="userId" layoutX="25.0" layoutY="54.0" text="User Id: 512" textFill="#000000d3"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0"/>
+            </padding>
+        </VBox>
+        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="1.0" HBox.hgrow="ALWAYS">
+            <children>
+                <Label fx:id="bookName" alignment="CENTER" text="Book Name">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="3.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="bookId" layoutX="25.0" layoutY="54.0" text="S.No. 512" textFill="#000000d3"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0"/>
+            </padding>
+        </VBox>
+        <VBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER_RIGHT">
+                    <children>
+                        <Label text="Return:">
+                            <font>
+                                <Font name="Segoe UI" size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="returnAt" layoutX="181.0" layoutY="10.0" styleClass="not_returned" text="Not Yet"
+                               textFill="#ff2200">
+                            <font>
+                                <Font name="Segoe UI" size="16.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="issuedAt" layoutX="111.0" layoutY="31.0" text="Issued At: 21-04-2021"
+                       textFill="#000000c0"/>
+            </children>
+            <padding>
+                <Insets left="15.0" right="15.0"/>
+            </padding>
+        </VBox>
+    </children>
+</HBox>

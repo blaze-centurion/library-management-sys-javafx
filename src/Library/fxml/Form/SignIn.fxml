@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="blue-panel"
+      stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/11"
+      fx:controller="Library.Controller.Form.SignInController">
+    <children>
+        <Label fx:id="errorLabel" alignment="CENTER" prefWidth="480.0" text="Error" textFill="#f80000" visible="false"
+               VBox.vgrow="ALWAYS">
+            <font>
+                <Font size="23.0"/>
+            </font>
+            <VBox.margin>
+                <Insets bottom="30.0"/>
+            </VBox.margin>
+        </Label>
+        <Label text="Login" textFill="#2196f3">
+            <font>
+                <Font size="20.0"/>
+            </font>
+            <VBox.margin>
+                <Insets bottom="5.0" left="20.0" right="20.0"/>
+            </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="tf">
+            <children>
+                <TextField fx:id="tfEmail" promptText="Email" styleClass="tf_box" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0"/>
+                    </padding>
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0"/>
+                    </HBox.margin>
+                </TextField>
+                <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.3em">
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIcon>
+            </children>
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="245.0" prefHeight="40.0" prefWidth="200.0"
+              styleClass="tf">
+            <children>
+                <TextField fx:id="tfPassword" promptText="Password" style="-fx-text-fill: #ffffff;" styleClass="tf_box"
+                           HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0"/>
+                    </padding>
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0"/>
+                    </HBox.margin>
+                </TextField>
+                <FontAwesomeIcon fill="WHITE" glyphName="LOCK" size="1.4em">
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="6.0"/>
+                    </HBox.margin>
+                </FontAwesomeIcon>
+            </children>
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0"/>
+            </VBox.margin>
+        </HBox>
+        <JFXButton onAction="#signIn" prefHeight="39.0" prefWidth="464.0" styleClass="blue-btn" text="Sign In">
+            <VBox.margin>
+                <Insets left="20.0" right="20.0" top="30.0"/>
+            </VBox.margin>
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </JFXButton>
+    </children>
+</VBox>

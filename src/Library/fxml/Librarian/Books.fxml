@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="bookPanel" prefHeight="870.0" styleClass="white-pane"
+            stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/11"
+            fx:controller="Library.Controller.LibrarianPanel.BooksController">
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="80.0" layoutY="120.0"
+              style="-fx-background-color: white; -fx-background-radius: 50px;" AnchorPane.leftAnchor="80.0"
+              AnchorPane.rightAnchor="427.0">
+            <children>
+                <TextField fx:id="searchbar" prefHeight="36.0" prefWidth="694.0" promptText="Search Book"
+                           style="-fx-background-color: white; -fx-background-radius: 50px;" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0"/>
+                    </padding>
+                    <font>
+                        <Font name="Segoe UI" size="16.0"/>
+                    </font>
+                </TextField>
+                <Button fx:id="searchBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0"
+                        style="-fx-background-color: white; -fx-background-radius: 50%;" HBox.hgrow="ALWAYS">
+                    <graphic>
+                        <FontAwesomeIcon glyphName="SEARCH" size="20"/>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <padding>
+                        <Insets bottom="1.0" left="10.0" right="15.0"/>
+                    </padding>
+                </Button>
+            </children>
+            <effect>
+                <DropShadow height="10.0" radius="4.5" width="10.0">
+                    <color>
+                        <Color red="0.550000011920929" green="0.550000011920929" blue="0.550000011920929"
+                               opacity="0.987118661403656"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </HBox>
+        <JFXComboBox fx:id="sortBx" focusColor="#aa0dff" labelFloat="true" layoutX="1088.0" layoutY="120.0"
+                     promptText="Sort By" unFocusColor="#08b6ff" AnchorPane.rightAnchor="70.0"/>
+        <VBox layoutX="58.0" layoutY="240.0" prefHeight="405.0" prefWidth="1138.0" AnchorPane.leftAnchor="58.0"
+              AnchorPane.rightAnchor="50.0">
+            <children>
+                <StackPane fx:id="stackPane">
+                    <children>
+                        <TableView id="my-table" fx:id="tableView" editable="true">
+                            <columns>
+                                <TableColumn fx:id="tcSno" maxWidth="100.0" minWidth="100.0" prefWidth="139.0"
+                                             text="S.No"/>
+                                <TableColumn fx:id="tcBookImg" prefWidth="75.0" text="Book Image"/>
+                                <TableColumn fx:id="tcBookName" editable="false" minWidth="27.0" prefWidth="197.0"
+                                             sortable="false" text="Book Name"/>
+                                <TableColumn fx:id="tcCategory" prefWidth="75.0" text="Category"/>
+                                <TableColumn fx:id="tcTotalBooks" minWidth="20.0" prefWidth="75.0" text="Total Books"/>
+                                <TableColumn fx:id="tcAvailable" maxWidth="150.0" minWidth="150.0" prefWidth="75.0"
+                                             text="Available Books"/>
+                                <TableColumn fx:id="tcIssued" maxWidth="150.0" minWidth="150.0" prefWidth="75.0"
+                                             text="Issued Books"/>
+                                <TableColumn fx:id="tcOperation" maxWidth="150.0" minWidth="150.0" prefWidth="75.0"
+                                             text="Operation"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </StackPane>
+            </children>
+        </VBox>
+        <HBox layoutX="940.0" layoutY="20.0" spacing="15.0" AnchorPane.rightAnchor="43.0">
+            <children>
+                <JFXButton fx:id="btnAddNewBook" alignment="CENTER" buttonType="RAISED" focusTraversable="false"
+                           styleClass="dashboard_blue_btn" text="Add New Book">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" size="22"/>
+                    </graphic>
+                    <padding>
+                        <Insets bottom="6.0" left="10.0" right="10.0" top="6.0"/>
+                    </padding>
+                </JFXButton>
+                <JFXButton fx:id="btnRemoveBook" alignment="CENTER" buttonType="RAISED" focusTraversable="false"
+                           layoutX="10.0" layoutY="10.0" styleClass="dashboard_blue_btn" text="Remove Book">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="TRASH" size="22"/>
+                    </graphic>
+                    <padding>
+                        <Insets bottom="6.0" left="10.0" right="10.0" top="6.0"/>
+                    </padding>
+                </JFXButton>
+                <JFXButton fx:id="btnAddInStock" alignment="CENTER" buttonType="RAISED" focusTraversable="false"
+                           layoutX="159.0" layoutY="10.0" styleClass="dashboard_blue_btn" text="Add In Stock">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" size="22"/>
+                    </graphic>
+                    <padding>
+                        <Insets bottom="6.0" left="10.0" right="10.0" top="6.0"/>
+                    </padding>
+                </JFXButton>
+            </children>
+        </HBox>
+        <JFXButton layoutX="1149.0" layoutY="199.0" onAction="#refresh" prefHeight="35.0" prefWidth="35.0"
+                   style="-fx-background-radius: 50px;" text="" AnchorPane.rightAnchor="61.0">
+            <graphic>
+                <FontAwesomeIcon fill="#515151" glyphName="REFRESH" size="20"/>
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

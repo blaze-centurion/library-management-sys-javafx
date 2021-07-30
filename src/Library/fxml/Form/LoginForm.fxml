@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="680.0" prefWidth="980.0" styleClass="parent"
+            stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/11"
+            fx:controller="Library.Controller.Form.FormController">
+    <children>
+        <Pane layoutX="2.0" layoutY="140.0" prefHeight="400.0" prefWidth="949.0" styleClass="pane">
+            <children>
+                <Label layoutX="56.0" layoutY="166.0" text="Don't have an account?" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <JFXButton focusTraversable="false" layoutX="56.0" layoutY="217.0" onAction="#open_signUp"
+                           prefHeight="32.0" prefWidth="145.0" styleClass="trans-btn-white-border"
+                           text="Create an account." textFill="#f2f2f2"/>
+                <Label layoutX="700.0" layoutY="132.0" text="Have an account?" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <JFXButton focusTraversable="false" layoutX="700.0" layoutY="185.0" onAction="#open_signIn"
+                           prefHeight="32.0" prefWidth="93.0" styleClass="trans-btn-white-border" text="Sign In"
+                           textFill="#f2f2f2"/>
+                <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="721.0" layoutY="99.0" size="75"/>
+                <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="70.0" layoutY="130.0" size="75"/>
+                <VBox id="vbox" fx:id="formContainer" layoutX="21.0" layoutY="-49.0" prefHeight="480.0"
+                      prefWidth="480.0" styleClass="white-pane"/>
+                <Button layoutX="915.0" mnemonicParsing="false" onAction="#exit"
+                        style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="20"/>
+                    </graphic>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

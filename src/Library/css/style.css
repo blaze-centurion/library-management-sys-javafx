@@ -1,0 +1,199 @@
+/*
+    Styling for login and signup form.
+*/
+
+.parent{
+    -fx-background-color: transparent;
+}
+.pane{
+   -fx-background-color: #2196f3;
+}
+
+.trans-btn-white-border{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+}
+
+.white-pane{
+    -fx-background-color: #fff;
+}
+.blue-panel{
+    -fx-background-color: #151928;
+}
+
+.tf_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #dedee4;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-text-fill: #fff !important;
+}
+
+.tf {
+    -fx-background-color: transparent;
+}
+.blue-btn{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fff;
+}
+.cancel-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #2196f3;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #fff;
+}
+.filechoose_btn{
+    -fx-background-color: #f2360c;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fff;
+}
+
+
+/*
+    Styling for user dashboard.
+*/
+
+.sidebar_items {
+    -fx-cursor: hand;
+}
+.sidebar_items:hover .label, .sidebar_items:hover .sidebar_icons{
+    -fx-text-fill: #00aeff;
+    -fx-fill: #00aeff;
+}
+.sidebar_items.active {
+    -fx-background-color: #e6f7ff !important;
+    -fx-border-width: 0px 2px 0px 0px;
+    -fx-border-color: #00aeff;
+}
+.toggle_btn:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.04);
+}
+
+.dashboard_blue_btn {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #1d95ff;
+    -fx-text-fill: white;
+}
+.dashboard_blue_btn .glyph-icon {
+    -fx-fill: #fff !important;
+}
+.card {
+    -fx-background-color: rgb(243, 243, 243);
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(0, 0, 0, 0.12);
+}
+.card_header {
+    -fx-background-color: rgb(245, 245, 245);
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-border-radius: 10px 10px 0px 0px;
+}
+.card_header_btn {
+    -fx-background-color: rgb(245, 245, 245);
+    -fx-background-radius: 10px;
+}
+.card_header_btn:hover {
+    -fx-background-color: #d9d9d9 !important;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color:  #eeecec;
+    -fx-pref-width: 14px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.scroll-bar:vertical *.increment-arrow,
+.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 0px !important;
+    -fx-pref-height: 0px !important;
+    -fx-opacity: 0;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color:  #eeecec;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgb(190, 189, 189);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.history_heading_bar {
+    -fx-border-color: #e2e0e0;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.table-view {
+    -fx-background-color: white;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: white;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: white;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #e2e0e0;
+    -fx-padding: 0px 0px 10px 0px;
+}
+.table-view .column-header {
+    -fx-padding: 0px 15px 0px 15px;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-alignment: center_left;
+    -fx-font-size: 16px;
+}
+.table-view .table-cell {
+    -fx-border-color: transparent !important;
+    -fx-border-width: 1px !important;
+    -fx-padding: 15px 13px 15px 13px;
+    -fx-font-size: 15px;
+}
+
+.table-row-cell .table-cell {
+        -fx-border-color: #dee2e6 !important;
+        -fx-border-width: 0px 0px 1px 0px !important;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6 !important;
+    -fx-border-width: 0px 0px 1px 0px !important;
+    -fx-text-fill: black;
+}
+
+.returned {
+    -fx-text-fill: #12d318 !important;
+}
+.not_returned {
+    -fx-text-fill: #ff2200 !important;
+}
+
+.setting-tf {
+    -fx-background-color: white;
+    -fx-border-color: #63cdda;
+    -fx-border-radius: 16px;
+}

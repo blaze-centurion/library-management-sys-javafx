@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" styleClass="white-pane" stylesheets="@../../css/style.css"
+            xmlns="http://javafx.com/javafx/11" fx:controller="Library.Controller.UserPanel.HistoryController">
+    <children>
+        <JFXComboBox fx:id="sortBx" focusColor="#aa0dff" layoutX="1110.0" layoutY="30.0" promptText="Sort By"
+                     unFocusColor="#08b6ff" AnchorPane.rightAnchor="70.0"/>
+        <VBox layoutX="44.0" layoutY="140.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+            <children>
+                <StackPane fx:id="stackPane">
+                    <children>
+                        <TableView id="my-table" fx:id="tableView">
+                            <columns>
+                                <TableColumn fx:id="tcSno" prefWidth="75.0" text="S.No"/>
+                                <TableColumn fx:id="tcBookName" editable="false" prefWidth="75.0" sortable="false"
+                                             text="Book"/>
+                                <TableColumn fx:id="tcIssued" prefWidth="75.0" text="Issued At"/>
+                                <TableColumn fx:id="tcReturn" prefWidth="75.0" text="Return At"/>
+                                <TableColumn fx:id="tcFine" prefWidth="75.0" text="Fine"/>
+                                <TableColumn fx:id="tcOperation" prefWidth="75.0" text="Operation"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </StackPane>
+            </children>
+        </VBox>
+        <JFXButton layoutX="987.0" layoutY="123.0" onAction="#refresh" prefHeight="35.0" prefWidth="35.0"
+                   style="-fx-background-radius: 50px;" text="" AnchorPane.rightAnchor="39.0">
+            <graphic>
+                <FontAwesomeIcon fill="#515151" glyphName="REFRESH" size="20"/>
+            </graphic>
+        </JFXButton>
+        <Label fx:id="errorLabel" alignment="CENTER" layoutX="223.0" layoutY="68.0" text="Can't Issued Book"
+               textFill="RED" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

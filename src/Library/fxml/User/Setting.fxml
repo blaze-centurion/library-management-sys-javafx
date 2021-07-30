@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="settingPanel" prefHeight="484.0" prefWidth="735.0"
+            styleClass="white-pane" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/11"
+            fx:controller="Library.Controller.UserPanel.SettingController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="735.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" text="Edit Profile">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets left="60.0" top="32.0"/>
+            </padding>
+        </HBox>
+        <AnchorPane layoutX="73.0" layoutY="90.0" prefHeight="100.0" prefWidth="101.0">
+            <children>
+                <Circle fx:id="profileAvatar" fill="#1f93ff00" layoutX="51.0" layoutY="47.0" radius="42.0"
+                        stroke="TRANSPARENT" strokeType="INSIDE"/>
+                <JFXButton fx:id="changeProfileBtn" focusTraversable="false" layoutX="63.0" layoutY="63.0"
+                           style="-fx-background-color: #0984e3; -fx-background-radius: 50px;" text="">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PENCIL"/>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+        <Label fx:id="userIdLabel" layoutX="97.0" layoutY="188.0" text="User Id" textFill="#000000d5">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <VBox fx:id="settingTfBox" layoutX="257.0" layoutY="87.0" spacing="20.0" AnchorPane.leftAnchor="257.0"
+              AnchorPane.rightAnchor="92.0">
+            <children>
+                <HBox spacing="20.0">
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="User Name" textFill="#000000d5">
+                                    <VBox.margin>
+                                        <Insets bottom="4.0" left="6.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="tfUserName" promptText="User Name" styleClass="setting-tf">
+                                    <padding>
+                                        <Insets bottom="6.0" left="12.0" right="12.0" top="6.0"/>
+                                    </padding>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Email" textFill="#000000d5">
+                                    <VBox.margin>
+                                        <Insets bottom="4.0" left="6.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="tfEmail" editable="false" promptText="Email" styleClass="setting-tf">
+                                    <padding>
+                                        <Insets bottom="6.0" left="12.0" right="12.0" top="6.0"/>
+                                    </padding>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox spacing="20.0">
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Joined On" textFill="#000000d5">
+                                    <VBox.margin>
+                                        <Insets bottom="4.0" left="6.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="tfJoinedOn" editable="false" promptText="Join On"
+                                           styleClass="setting-tf">
+                                    <padding>
+                                        <Insets bottom="6.0" left="12.0" right="12.0" top="6.0"/>
+                                    </padding>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Role" textFill="#000000d5">
+                                    <VBox.margin>
+                                        <Insets bottom="4.0" left="6.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <JFXComboBox fx:id="cbRole" focusColor="#405aa800" prefHeight="30.0" prefWidth="145.0"
+                                             promptText="Role" styleClass="setting-tf" unFocusColor="#4d4d4d00">
+                                    <padding>
+                                        <Insets left="10.0"/>
+                                    </padding>
+                                </JFXComboBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox id="libCode" fx:id="libCodeRow">
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Librarian Code" textFill="#000000d5">
+                                    <VBox.margin>
+                                        <Insets bottom="4.0" left="6.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="tfLibCode" prefHeight="34.0" prefWidth="200.0" promptText="Code"
+                                           styleClass="setting-tf">
+                                    <padding>
+                                        <Insets bottom="6.0" left="12.0" right="12.0" top="6.0"/>
+                                    </padding>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <JFXButton fx:id="saveBtn" prefHeight="32.0" prefWidth="101.0"
+                           style="-fx-background-color: #45aaf2; -fx-background-radius: 50px;" text="Save"
+                           textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="17.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0"/>
+                    </VBox.margin>
+                </JFXButton>
+            </children>
+        </VBox>
+        <Label fx:id="errorLabel" alignment="CENTER" layoutY="390.0" text="Label" textFill="RED" visible="false"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

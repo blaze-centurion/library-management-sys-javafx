@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="userPanel" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="907.0" prefWidth="1491.0" stylesheets="@../../css/style.css"
+            xmlns="http://javafx.com/javafx/11"
+            fx:controller="Library.Controller.LibrarianPanel.LibrarianPanelController">
+    <left>
+        <VBox fx:id="sidebar_items_container" prefHeight="810.0" prefWidth="240.0"
+              style="-fx-background-color: white; -fx-border-color: #bababa; -fx-border-width: 0px 1px 0px 0px;"
+              styleClass="sidebar_container" BorderPane.alignment="CENTER">
+            <children>
+                <HBox fx:id="libDashboardItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="60.0"
+                      style="-fx-background-color: white;">
+                    <children>
+                        <FontAwesomeIcon glyphName="CIRCLE_ALT_NOTCH" size="23" styleClass="sidebar_icons">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label id="label" styleClass="sidebar_items_label" text="DashBoard">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="18.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="20.0"/>
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="sidebar_items"/>
+                        <String fx:value="active"/>
+                    </styleClass>
+                </HBox>
+                <HBox fx:id="libBookItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="90.0" prefHeight="60.0"
+                      style="-fx-background-color: white;" styleClass="sidebar_items">
+                    <children>
+                        <FontAwesomeIcon glyphName="BOOK" size="24" styleClass="sidebar_icons">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label styleClass="sidebar_items_label" text="Books">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="18.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="libHisItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="60.0"
+                      style="-fx-background-color: white;" styleClass="sidebar_items">
+                    <children>
+                        <FontAwesomeIcon glyphName="HISTORY" size="26" styleClass="sidebar_icons">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label styleClass="sidebar_items_label" text="History">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="18.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="libCatItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="180.0" prefHeight="60.0"
+                      style="-fx-background-color: white;" styleClass="sidebar_items">
+                    <children>
+                        <FontAwesomeIcon glyphName="LIST_ALT" size="23" styleClass="sidebar_icons">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label styleClass="sidebar_items_label" text="Category">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="18.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="libUserItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="240.0" prefHeight="60.0"
+                      style="-fx-background-color: white;" styleClass="sidebar_items">
+                    <children>
+                        <FontAwesomeIcon glyphName="USER" size="29" styleClass="sidebar_icons">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label styleClass="sidebar_items_label" text="Users">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="18.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="67.0" prefHeight="47.0" prefWidth="237.0"
+                              style="-fx-background-color: white; -fx-border-width: 1px 0px 1px 0px; -fx-border-color: #bababa;">
+                            <children>
+                                <Label styleClass="sidebar_items_label" text="Personal">
+                                    <font>
+                                        <Font size="20.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="18.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="47.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets bottom="9.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="dashboardItem" alignment="CENTER_LEFT" prefHeight="60.0"
+                              style="-fx-background-color: white;" styleClass="sidebar_items">
+                            <children>
+                                <FontAwesomeIcon glyphName="CIRCLE_ALT_NOTCH" size="23" styleClass="sidebar_icons">
+                                    <HBox.margin>
+                                        <Insets left="25.0"/>
+                                    </HBox.margin>
+                                </FontAwesomeIcon>
+                                <Label styleClass="sidebar_items_label" text="DashBoard">
+                                    <font>
+                                        <Font size="20.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="18.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="bookHisItem" alignment="CENTER_LEFT" layoutX="10.0" layoutY="371.0"
+                              prefHeight="60.0" style="-fx-background-color: white;" styleClass="sidebar_items">
+                            <children>
+                                <FontAwesomeIcon glyphName="BOOK" size="24" styleClass="sidebar_icons">
+                                    <HBox.margin>
+                                        <Insets left="25.0"/>
+                                    </HBox.margin>
+                                </FontAwesomeIcon>
+                                <Label styleClass="sidebar_items_label" text="Books">
+                                    <font>
+                                        <Font size="20.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="18.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="130.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" fx:id="settingItem" layoutX="10.0" layoutY="347.0"
+                              prefHeight="60.0"
+                              style="-fx-background-color: white;" styleClass="sidebar_items">
+                            <children>
+                                <FontAwesomeIcon glyphName="GEAR" size="25" styleClass="sidebar_icons">
+                                    <HBox.margin>
+                                        <Insets left="25.0"/>
+                                    </HBox.margin>
+                                </FontAwesomeIcon>
+                                <Label styleClass="sidebar_items_label" text="Settings">
+                                    <font>
+                                        <Font size="20.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="18.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="35.0"/>
+                    </padding>
+                </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <padding>
+                <Insets right="2.0"/>
+            </padding>
+        </VBox>
+    </left>
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0"
+              style="-fx-background-color: white; -fx-border-color: #bababa; -fx-border-width: 0px 0px 1px 0px;"
+              BorderPane.alignment="CENTER">
+            <children>
+                <HBox fx:id="logoBx" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="240.0"
+                      style="-fx-background-color: white; -fx-border-color: #bababa; -fx-border-width: 0px 1px 0px 0px;">
+                    <children>
+                        <FontAwesomeIcon glyphName="APPLE" size="28">
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0"/>
+                            </HBox.margin>
+                        </FontAwesomeIcon>
+                    </children>
+                </HBox>
+                <JFXButton focusTraversable="false" onAction="#toggleSidebar" prefHeight="50.0" prefWidth="50.0"
+                           ripplerFill="#ababab" style="-fx-background-radius: 50%; -fx-border-radius: 50%;"
+                           styleClass="toggle_btn" text="">
+                    <graphic>
+                        <FontAwesomeIcon glyphName="BARS" size="23"/>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="8.0"/>
+                    </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+                <Label fx:id="panelNameLabel" text="DashBoard">
+                    <font>
+                        <Font size="19.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </Label>
+                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Circle fx:id="profileAvatar" fill="WHITE" radius="20.0" stroke="WHITE" strokeType="INSIDE"
+                                strokeWidth="0.0">
+                            <HBox.margin>
+                                <Insets right="30.0"/>
+                            </HBox.margin>
+                        </Circle>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+</BorderPane>
