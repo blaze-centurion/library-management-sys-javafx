@@ -18,3 +18,5 @@ In this project, there are 2 types of user -
 
 - Create the required database using the sql file given in lib directory.
 - Download the required library from their official website.
+
+*Note*: Some features are not implemented yet, and their will some be some bugs and problem.
